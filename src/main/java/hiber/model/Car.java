@@ -7,8 +7,8 @@ import java.util.Objects;
 @Table(name = "cars")
 public class Car {
     @Id
-    String model;
-    int series;
+    private String model;
+    private int series;
 
     public Car() {
 
