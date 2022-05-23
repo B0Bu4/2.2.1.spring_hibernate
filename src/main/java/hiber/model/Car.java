@@ -6,9 +6,17 @@ import java.util.Objects;
 @Entity
 @Table(name = "cars")
 public class Car {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     private String model;
     private int series;
+
+    @OneToOne
+    private User user;
+
 
     public Car() {
 
